@@ -1,14 +1,20 @@
-# Teste titulo
+# tÃ­tulo de teste
 
-Teste descrição
+DescriÃ§Ã£o de teste
 
 ## Frameworks
 
-- [Vite.js](https://vitejs.dev)
+- [Next.js](https://nextjs.org)
 - [Node.js](https://nodejs.org)
 - [Tailwind CSS](https://tailwindcss.com)
 
 ## How to use it?
+
+### Online access
+
+Just click in the website of the repository or [here]( https://lymei.art )!
+
+##### or
 
 ### Local access
 
@@ -16,6 +22,6 @@ Teste descrição
 
 2. Start the local server using `npm run dev`
 
-##### [Back to the top](https://github.com/imLymei/tower-of-hanoi#Tower-of-Hanoi)
+##### [Back to the top](#)
 
 ###### Create by [Felipe Cardoso](https://lymei.art)
