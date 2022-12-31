@@ -1,19 +1,22 @@
-# titulo 1
+# README.md maker
 
-descriçao 1
+Simple README.md template maker made with python. Setup frameworks and language resources with setup guide.
 
+## 💻Frameworks/Languages
 
-## How to use it?
+- [Python](https://www.python.org)
 
-### Online access
-
-Just click in the website of the repository or [here]( lol123.com )!
-
-##### or
+## 🚀How to use it?
 
 ### Local access
 
-Just open index.html in live server
+Run the index.py:
+
+```
+python3 index.py
+```
+
+`python3 .\index.py help` opens the help menu
 
 ##### [Back to the top](#)
 
