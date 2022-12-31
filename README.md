@@ -1,26 +1,19 @@
-# título de teste
+# titulo 1
 
-Descrição de teste
+descriçao 1
 
-## Frameworks
-
-- [Next.js](https://nextjs.org)
-- [Node.js](https://nodejs.org)
-- [Tailwind CSS](https://tailwindcss.com)
 
 ## How to use it?
 
 ### Online access
 
-Just click in the website of the repository or [here]( https://lymei.art )!
+Just click in the website of the repository or [here]( lol123.com )!
 
 ##### or
 
 ### Local access
 
-1. Install node modules in the project with `npm install`
-
-2. Start the local server using `npm run dev`
+Just open index.html in live server
 
 ##### [Back to the top](#)
 
