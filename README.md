@@ -1,6 +1,6 @@
 # README.md maker
 
-Simple README.md template maker made with python. Setup frameworks and language resources with setup guide.
+A simple README.md template maker made with Python and Tkinter. Setup frameworks and language resources with the GUI checkboxes.
 
 ## 💻Frameworks/Languages
 
