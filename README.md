@@ -5,18 +5,17 @@ Simple README.md template maker made with python. Setup frameworks and language 
 ## 💻Frameworks/Languages
 
 - [Python](https://www.python.org)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
 
 ## 🚀How to use it?
 
 ### Local access
 
-Run the index.py:
+Run the main.py:
 
 ```
-python3 index.py
+python3 main.py
 ```
-
-`python3 .\index.py help` opens the help menu
 
 ##### [Back to the top](#)
 

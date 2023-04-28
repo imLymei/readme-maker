@@ -43,6 +43,7 @@ try:
         elif currentArgument in ("-N", "--Node"):
             file.write("- [Node.js](https://nodejs.org)\n")
             haveNpm = True
+            runCommand = "node ."
 
         elif currentArgument in ("-t", "--Tailwind"):
             file.write("- [Tailwind CSS](https://tailwindcss.com)\n")
