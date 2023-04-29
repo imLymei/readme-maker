@@ -1,22 +1,21 @@
 # README.md maker
 
-Simple README.md template maker made with python. Setup frameworks and language resources with setup guide.
+A simple README.md template maker made with Python and Tkinter. Setup frameworks and language resources with the GUI checkboxes.
 
 ## 💻Frameworks/Languages
 
 - [Python](https://www.python.org)
+- [Tkinter](https://docs.python.org/3/library/tkinter.html)
 
 ## 🚀How to use it?
 
 ### Local access
 
-Run the index.py:
+Run the main.py:
 
 ```
-python3 index.py
+python3 main.py
 ```
-
-`python3 .\index.py help` opens the help menu
 
 ##### [Back to the top](#)
 
