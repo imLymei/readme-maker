@@ -256,4 +256,4 @@ class App(tk.Tk):
             'Erro na criação do README', message)
 
 
-app = App((400, 400), 'MD Maker')
+app = App((400, 400), 'README Maker')
