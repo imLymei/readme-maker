@@ -21,7 +21,7 @@ A simple README.md template maker made with Python and Tkinter.
 
 Run the main.py:
 
-```
+```bash
 python3 main.py
 ```
 
