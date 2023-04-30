@@ -1,6 +1,14 @@
 # README.md maker
 
-A simple README.md template maker made with Python and Tkinter. Setup frameworks and language resources with the GUI checkboxes.
+A simple README.md template maker made with Python and Tkinter.
+
+- [X] Change title and description.
+- [X] Setup website URL.
+- [X] Setup frameworks and language resources.
+- [ ] Create custom credits with URL.
+- [ ] Create extended Markdowm syntax.
+
+![GUI example](https://cdn.discordapp.com/attachments/859640514571927562/1101943639543922779/image.png)
 
 ## 💻Frameworks/Languages
 
