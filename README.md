@@ -2,9 +2,9 @@
 
 A simple README.md template maker made with Python and Tkinter.
 
-- [X] Change title and description.
-- [X] Setup website URL.
-- [X] Setup frameworks and language resources.
+- [x] Change title and description.
+- [x] Setup website URL.
+- [x] Setup frameworks and language resources.
 - [ ] Create custom credits with URL.
 - [ ] Create extended Markdowm syntax.
 
