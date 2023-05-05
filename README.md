@@ -1,26 +1,27 @@
-# DDDD
+# README.md maker
 
-DDDD
+A simple README.md template maker made with Python and CustomTkinter.
+
+- [x] Change title and description.
+- [x] Setup website URL.
+- [x] Setup frameworks and language resources.
+- [ ] Create custom credits with URL.
+- [ ] Create extended Markdowm syntax.
+
+![GUI example](https://cdn.discordapp.com/attachments/859640514571927562/1101943639543922779/image.png)
 
 ## 💻Frameworks/Languages
 
+- [Python](https://www.python.org)
 - [Tkinter](https://docs.python.org/3/library/tkinter.html)
-- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-- [React.js](https://reactjs.org)
-- [Next.js](https://nextjs.org)
-- [Tailwind CSS](https://tailwindcss.com)
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
 
 ## 🚀How to use it?
-
-### Online access
-
-Just click in the website of the repository or [here]( https://google.com )!
-
-##### or
 
 ### Local access
 
 Run the main.py:
+
 ```bash
 python3 main.py
 ```
