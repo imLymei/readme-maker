@@ -1,10 +1,11 @@
-import sys
 import tkinter as tk
 from tkinter import ttk
+import customtkinter as ctk
 from tkinter import messagebox
 
 
-class App(tk.Tk):
+# TODO: -Adjust UX and UI
+class App(ctk.CTk):
     def __init__(self, size, title):
         super().__init__()
         self.geometry(f'{size[0]}x{size[1]}')
@@ -21,24 +22,24 @@ class App(tk.Tk):
         self.mainloop()
 
     def initialize_variables(self):
-        self.title_var = tk.StringVar()
-        self.description_var = tk.StringVar()
+        self.title_var = ctk.StringVar()
+        self.description_var = ctk.StringVar()
 
         self.technologies = {
-            'Python': (tk.IntVar(), '- [Python](https://www.python.org)\n'),
-            'Tkinter': (tk.IntVar(), '- [Tkinter](https://docs.python.org/3/library/tkinter.html)\n'),
-            'Javascript': (tk.IntVar(), '- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)\n'),
-            'Node': (tk.IntVar(), '- [Node.js](https://nodejs.org)\n'),
-            'React': (tk.IntVar(), '- [React.js](https://reactjs.org)\n'),
-            'Next': (tk.IntVar(), '- [Next.js](https://nextjs.org)\n'),
-            'Vite': (tk.IntVar(), '- [Vite.js](https://vitejs.dev)\n'),
-            'Tailwind CSS': (tk.IntVar(), '- [Tailwind CSS](https://tailwindcss.com)\n'),
+            'Python': (ctk.IntVar(), '- [Python](https://www.python.org)\n'),
+            'Tkinter': (ctk.IntVar(), '- [Tkinter](https://docs.python.org/3/library/tkinter.html)\n'),
+            'Javascript': (ctk.IntVar(), '- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)\n'),
+            'Node': (ctk.IntVar(), '- [Node.js](https://nodejs.org)\n'),
+            'React': (ctk.IntVar(), '- [React.js](https://reactjs.org)\n'),
+            'Next': (ctk.IntVar(), '- [Next.js](https://nextjs.org)\n'),
+            'Vite': (ctk.IntVar(), '- [Vite.js](https://vitejs.dev)\n'),
+            'Tailwind CSS': (ctk.IntVar(), '- [Tailwind CSS](https://tailwindcss.com)\n'),
         }
 
-        self.has_online_access = [tk.IntVar(), tk.StringVar()]
+        self.has_online_access = [ctk.IntVar(), ctk.StringVar()]
 
     def generate_layout(self):
-        self.main_frame = ttk.Frame(self)
+        self.main_frame = ctk.CTkFrame(self)
         self.main_frame.columnconfigure(0, weight=1, uniform='a')
         self.main_frame.rowconfigure((0, 1, 2, 3), weight=1, uniform='a')
 
@@ -48,7 +49,7 @@ class App(tk.Tk):
 
         self.configure_access_options()
 
-        self.generate_button = ttk.Button(
+        self.generate_button = ctk.CTkButton(
             self.main_frame,
             text='Generate',
             command=self.generate_md
@@ -68,25 +69,26 @@ class App(tk.Tk):
         self.generate_button.grid(column=0, row=3, sticky='nswe', pady=10)
 
     def configure_header(self):
-        self.header = ttk.Frame(self.main_frame)
+        self.header = ctk.CTkFrame(self.main_frame)
 
         self.title_frame = self.configure_grid_frame(3, 1, self.header)
-        self.title_entry = ttk.Entry(
+        self.title_entry = ctk.CTkEntry(
             self.title_frame,
             textvariable=self.title_var
         )
-        self.title_label = ttk.Label(
+        self.title_label = ctk.CTkLabel(
             self.title_frame,
             text='Titulo',
             width=1
         )
 
+        # TODO: -Change Entry to TextBox
         self.description_frame = self.configure_grid_frame(3, 1, self.header)
-        self.description_entry = ttk.Entry(
+        self.description_entry = ctk.CTkEntry(
             self.description_frame,
             textvariable=self.description_var
         )
-        self.description_label = ttk.Label(
+        self.description_label = ctk.CTkLabel(
             self.description_frame,
             text='Descrição',
             width=1
@@ -115,7 +117,7 @@ class App(tk.Tk):
         )
 
         for index, technology in enumerate(self.technologies):
-            ttk.Checkbutton(
+            ctk.CTkCheckBox(
                 self.technologies_frame,
                 text=technology,
                 variable=self.technologies.get(technology)[0]
@@ -128,14 +130,14 @@ class App(tk.Tk):
             parent=self.main_frame
         )
 
-        self.online_checkbutton = ttk.Checkbutton(
+        self.online_checkbutton = ctk.CTkCheckBox(
             self.online_frame,
             text='Online access',
             variable=self.has_online_access[0],
             command=lambda: self.handle_entry_by_checkbutton(
                 self.has_online_access[0], self.online_access_entry)
         )
-        self.online_access_entry = ttk.Entry(
+        self.online_access_entry = ctk.CTkEntry(
             self.online_frame,
             textvariable=self.has_online_access[1]
         )
@@ -152,11 +154,11 @@ class App(tk.Tk):
     def configure_grid_frame(self, column_size, row_size=5, parent=None):
         if parent == None:
             parent = self.main_frame
-        frame = ttk.Frame(parent)
+        frame = ctk.CTkFrame(parent)
         frame.grid_columnconfigure(
-            ([i for i in range(column_size)]), weight=1, uniform='a')
+            (list(range(column_size))), weight=1, uniform='a')
         frame.grid_rowconfigure(
-            ([i for i in range(row_size)]), weight=1)
+            (list(range(row_size))), weight=1)
         return frame
 
     def handle_entry_by_checkbutton(self, checkbutton_var, entry):
@@ -165,12 +167,16 @@ class App(tk.Tk):
         else:
             entry.configure(state='disabled')
 
+    # TODO: -Add save directory selector
+    # TODO: -Add clipboard option
+    # TODO: -Add custom credit with link
+    # TODO: -Add checkbutton to README
     def generate_md(self):
         title = self.title_var.get()
         description = self.description_var.get()
 
         if self.text_is_valid(title) and self.text_is_valid(description):
-            file = open('README.md', 'w', encoding='UTF-8')
+            file = open('README_TEST.md', 'w', encoding='UTF-8')
             file.write(f'# {title}\n\n')
             file.write(f'{description}\n\n')
 
