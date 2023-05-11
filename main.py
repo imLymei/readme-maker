@@ -1,3 +1,4 @@
+import markdown
 import settings
 import md_manager as mg
 import customtkinter as ctk
@@ -12,9 +13,13 @@ class App(ctk.CTk):
         self.resizable(False, False)
 
         self.md_manager = mg.MdManager()
-        self.md_manager.add_text(1, 'My TiTleXXXX')
-        self.md_manager.add_text(2, 'My SUBTITLE XXYY')
-        self.md_manager.add_text(3, 'My TESTXTTTTTTXTTTTT')
+        self.md_manager.add_text(1, 'My TiTleXXX')
+        self.md_manager.add_text(2, 'My SUBTITLE XXY')
+        self.md_manager.add_text(3, 'My TESTXTTTTTTXTTTT')
+
+        self.md_manager.add_checkbutton('teste 1', True)
+        self.md_manager.add_checkbutton('teste 2')
+        self.md_manager.add_checkbutton('teste 2', False)
 
         self.bind_all('<Return>', lambda event: self.generate_md())
 
