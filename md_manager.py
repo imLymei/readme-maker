@@ -2,7 +2,7 @@ import elements
 import settings
 
 
-class MdGenerator:
+class MdManager:
     def __init__(self):
         self.file_name = 'README_TESTE'
         self.directory = './'
@@ -20,3 +20,7 @@ class MdGenerator:
 
     def add_element(self, element):
         self.elements.append(element)
+
+    def add_text(self, title_importance, text):
+        new_text = elements.Text(title_importance, text)
+        self.add_element(new_text)
