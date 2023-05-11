@@ -24,3 +24,7 @@ class MdManager:
     def add_text(self, title_importance, text):
         new_text = elements.Text(title_importance, text)
         self.add_element(new_text)
+
+    def add_checkbutton(self, text, is_selected=False):
+        new_chekbutton = elements.Checkbutton (text, is_selected)
+        self.add_checkbutton(new_chekbutton)
