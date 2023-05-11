@@ -1,6 +1,6 @@
 # README.md maker
 
-A simple README.md template maker made with Python and Tkinter.
+A simple README.md template maker made with Python and CustomTkinter.
 
 - [x] Change title and description.
 - [x] Setup website URL.
@@ -14,6 +14,7 @@ A simple README.md template maker made with Python and Tkinter.
 
 - [Python](https://www.python.org)
 - [Tkinter](https://docs.python.org/3/library/tkinter.html)
+- [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)
 
 ## 🚀How to use it?
 
