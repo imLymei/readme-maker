@@ -12,9 +12,9 @@ class App(ctk.CTk):
         self.resizable(False, False)
 
         self.md_manager = mg.MdManager()
-        self.md_manager.add_header(1, 'My TiTleXXXX')
-        self.md_manager.add_header(2, 'My SUBTITLE XXYY')
-        self.md_manager.add_header(3, 'My TESTXTTTTTTXTTTTT')
+        self.md_manager.add_heading(1, 'My TiTle')
+        self.md_manager.add_heading(2, 'My SUBTITLE')
+        self.md_manager.add_heading(3, 'My TEST')
 
         self.bind_all('<Return>', lambda event: self.generate_md())
 

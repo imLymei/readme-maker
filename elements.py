@@ -9,7 +9,7 @@ def validate_title_importance(title_importance):
         return 5
 
 
-class Header:
+class Heading:
     def __init__(self, title_importance, text):
         self.title_importance = validate_title_importance(title_importance)
         self.text = text
