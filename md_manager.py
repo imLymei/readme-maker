@@ -21,6 +21,6 @@ class MdManager:
     def add_element(self, element):
         self.elements.append(element)
 
-    def add_text(self, title_importance, text):
-        new_text = elements.Text(title_importance, text)
+    def add_header(self, title_importance, text):
+        new_text = elements.Header(title_importance, text)
         self.add_element(new_text)
