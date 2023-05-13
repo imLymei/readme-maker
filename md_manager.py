@@ -24,3 +24,7 @@ class MdManager:
     def add_heading(self, title_importance, text):
         new_text = elements.Heading(title_importance, text)
         self.add_element(new_text)
+
+    def add_paragraph(self, text):
+        new_text = elements.Paragraph(text)
+        self.add_element(new_text)

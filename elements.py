@@ -15,3 +15,10 @@ class Heading:
         self.text = text
 
         self.markdown = f'\n{settings.TITLE_IMPORTANCE[self.title_importance]} {self.text}\n'
+
+
+class Paragraph:
+    def __init__(self, text):
+        self.text = text
+
+        self.markdown = f'\n{self.text}\n'
