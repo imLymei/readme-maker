@@ -15,6 +15,7 @@ class App(ctk.CTk):
         self.md_manager.add_heading(1, 'My TiTle')
         self.md_manager.add_heading(2, 'My SUBTITLE')
         self.md_manager.add_heading(3, 'My TEST')
+        self.md_manager.add_paragraph('Teste Aury')
 
         self.bind_all('<Return>', lambda event: self.generate_md())
 
