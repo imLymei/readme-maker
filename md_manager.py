@@ -1,4 +1,5 @@
 import elements
+import tkinter as tk
 import settings
 
 
@@ -6,6 +7,8 @@ class MdManager:
     def __init__(self):
         self.file_name = 'README_TESTE'
         self.directory = './'
+
+        self.last_added = tk.StringVar()
 
         self.elements = []
 
@@ -20,6 +23,7 @@ class MdManager:
 
     def add_element(self, element):
         self.elements.append(element)
+        self.last_added.set(element.markdown)
 
     def add_heading(self, title_importance, text):
         new_text = elements.Heading(title_importance, text)
